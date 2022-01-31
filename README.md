@@ -1,10 +1,10 @@
-Доброго времени суток! Знаю что задание на java надо сделать, но если есть возмоноть прокоментируйте, пожалуйста :)
+Доброго времени суток! Знаю что задание на java надо сделать, но если есть возможность прокоментируйте, пожалуйста :)
 
-В переменной окружения прописаны пути к python и selenium
+В переменные окружения прописаны пути к python и selenium
 Для удобства стартануть venv выполнив в терминале: 
     python -m venv venv
     cd .\venv\Scripts
-    activate
+    .\activate
 Приложен файл requirements.txt для установки необходимых пакетов. Для установки pip -r requirements.txt
 
 Файлы конфигурация:
@@ -18,8 +18,8 @@ pytest.ini
 для запуска тестов набрать pytest либо с флагом -m и указать одну из mark, например pytest -m need_review
 
 Для генерации отчетов запускаем с параметрами(Предварительно настроив allure на машине, уставить пакет jdr?, scoop и через scoop allure, в переменные среды прописать все что необходимо. Давно настраивал у себя)):
-pytest --alluredir C:\Users\Anton\PycharmProjects\SDET-Simbirsoft-test-assignment\Allure-report
-allure serve pytest --alluredir C:\Users\Anton\PycharmProjects\SDET-Simbirsoft-test-assignment\Allure-report
+pytest --alluredir {desirable}\SDET-Simbirsoft-test-assignment\Allure-report
+allure serve pytest --alluredir {desirable}\SDET-Simbirsoft-test-assignment\Allure-report
 
 
 <h1>Тестовое задание</h1>
