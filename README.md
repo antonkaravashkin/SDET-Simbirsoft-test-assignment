@@ -17,6 +17,11 @@ pytest.ini
 
 для запуска тестов набрать pytest либо с флагом -m и указать одну из mark, например pytest -m need_review
 
+Для генерации отчетов запускаем с параметрами(Предварительно настроив allure на машине, уставить пакет jdr?, scoop и через scoop allure, в переменные среды прописать все что необходимо. Давно настраивал у себя)):
+pytest --alluredir C:\Users\Anton\PycharmProjects\SDET-Simbirsoft-test-assignment\Allure-report
+allure serve pytest --alluredir C:\Users\Anton\PycharmProjects\SDET-Simbirsoft-test-assignment\Allure-report
+
+
 <h1>Тестовое задание</h1>
 1. На языке программирования Java (версия на ваш выбор) создать проект UI 
 автотестов по тест-кейсам описанным ниже
