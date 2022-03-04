@@ -9,5 +9,6 @@ def driver():
     driver = webdriver.Chrome()
     driver.implicitly_wait(10)
     driver.get(LANDING_PAGE_URL)
-    yield driver    
+    yield driver
     driver.quit()
+    

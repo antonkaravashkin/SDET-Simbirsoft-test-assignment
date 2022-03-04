@@ -1,8 +1,8 @@
-from .locators import CalculatePageLocators
 import Variables.data
-from .landing_page import LandingPage
-from selenium.webdriver.common.keys import Keys
 
+from selenium.webdriver.common.keys import Keys
+from .landing_page import LandingPage
+from .locators import CalculatePageLocators
 
 
 class CalculatePage(LandingPage):
@@ -11,7 +11,6 @@ class CalculatePage(LandingPage):
         calculate.send_keys(*Variables.data.EXPRESSION1 + Keys.RETURN)
         self.equals = self.driver.find_element(*CalculatePageLocators.MEMORY_FIELD).text
         self.answer = self.driver.find_element(*CalculatePageLocators.ANSWER_FILED).text
-
 
     def assert_correct_expression_first(self):
         assert self.equals == Variables.data.CORRECTEXPRESSION1, "Expressions aren't equals"
@@ -37,7 +36,6 @@ class CalculatePage(LandingPage):
         calculate.send_keys(*Variables.data.EXPRESSION3 + Keys.RETURN)
         self.equals = self.driver.find_element(*CalculatePageLocators.MEMORY_FIELD).text
         self.answer = self.driver.find_element(*CalculatePageLocators.ANSWER_FILED).text
-
 
     def assert_correct_expression_third(self):
         assert self.equals == Variables.data.CORRECTEXPRESSION3, "Expressions aren't equals"
