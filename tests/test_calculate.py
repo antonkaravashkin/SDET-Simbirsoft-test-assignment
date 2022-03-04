@@ -1,6 +1,8 @@
-from pages.landing_page import LandingPage
-from pages.calculate_page import CalculatePage
 import pytest
+
+from pages.calculate_page import CalculatePage
+from pages.landing_page import LandingPage
+
 
 @pytest.mark.need_review
 class TestCalculation():
@@ -27,7 +29,7 @@ class TestCalculation():
 
         calc_page.assert_correct_expression_second()
         calc_page.assert_correct_answer_second()
-    
+
     @pytest.mark.calculate_third_expression
     def test_calculate_third_expression(self, driver):
         landing_page = LandingPage(driver)
