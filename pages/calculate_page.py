@@ -7,6 +7,9 @@ from .locators import CalculatePageLocators
 
 
 class CalculatePage(LandingPage):
+    def __init__(self, driver):
+        self.driver = driver
+
     def calculate_first_expression(self):
         calculate = self.driver.find_element(*CalculatePageLocators.CALCULATE_FIELD)
         calculate.send_keys(*Variables.data.EXPRESSION1 + Keys.RETURN)
